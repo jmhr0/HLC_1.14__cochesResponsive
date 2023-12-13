@@ -8,10 +8,10 @@ import { map } from 'rxjs/operators';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  coche: any;
+  coches: any;
   filtro: String=""
 
   constructor(private httpClient:HttpClient) {
-    this.coche = this.httpClient.get('https://randomuser.me/api/?results=20')
+    this.coches = this.httpClient.get('https://raw.githubusercontent.com/jmhr0/HLC_1.14__cochesResponsive/master/coches.json')
   }
 }
