@@ -25,3 +25,26 @@
 #container a {
   text-decoration: none;
 }
+
+ion-card{
+  background-color: #8c8c8c;
+}
+
+h1{
+color: black;
+text-decoration: underline;
+}
+
+h2{
+color: white;
+}
+
+@media screen and (orientation: landscape) {
+  .cocheTransmision,
+  .cocheId {
+    display: none;
+  }
+}
+
+@media screen and (orientation: portrait) {
+}

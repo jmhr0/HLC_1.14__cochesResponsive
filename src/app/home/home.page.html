@@ -15,11 +15,11 @@
           <ion-card>
             <ion-card-content>
               <img class="cocheImagen" [src]="coche.imagen">
-              <h1 class="cocheCreador">{{ coche.Coche_creador }}</h1>
-              <h2 class="cocheModelo">{{ coche.coche_modelo }}</h2>
-              <h2 class="cocheColor">{{ coche.color }}</h2>
-              <h2 class="cocheTransmision">{{ coche.transmision }}</h2>
-              <h2 class="cocheId">{{ coche.id }}</h2>
+              <h1 class="cocheCreador"><b>Marca: {{ coche.Coche_creador }}</b></h1> <br>
+              <h2 class="cocheId">Id: {{ coche.id }}</h2><br>
+              <h2 class="cocheModelo">Modelo: {{ coche.coche_modelo }}</h2> <br>
+              <h2 class="cocheColor">Color: {{ coche.color }}</h2> <br>
+              <h2 class="cocheTransmision">Tipo de transmision: {{ coche.transmision }}</h2> <br>
             </ion-card-content>
           </ion-card>
         </ion-col>
