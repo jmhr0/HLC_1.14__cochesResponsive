@@ -39,7 +39,43 @@ h2{
 color: white;
 }
 
-@media screen and (orientation: landscape) {
+.cocheImagen {
+  max-width: 100%;
+}
+/* Estilos para pantallas pequeñas (menor a 576px) */
+@media only screen and (max-width: 575px) {
+  .cocheImagen {
+    max-width: 80%; /* Reducir el ancho de la imagen */
+  }
+
+  .cocheNombre {
+    font-size: 1.2em;
+  }
+  h2{
+    color: blue;
+  }
+}
+
+/* Estilos para pantallas medianas (576px - 991px) */
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+  .cocheImagen {
+    max-width: 70%; /* Reducir el ancho de la imagen */
+  }
+
+  .cocheNombre {
+    font-size: 1.6em;
+  }
+}
+
+/* Estilos para pantallas grandes (mayor o igual a 992px) */
+@media only screen and (min-width: 992px) {
+  .cocheNombre {
+    font-size: 2em;
+  }
+}
+
+
+@media screen and (orientation: portrait) {
   .cocheTransmision,
   .cocheId {
     display: none;
