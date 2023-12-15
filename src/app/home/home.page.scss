@@ -39,34 +39,41 @@ h2{
 color: white;
 }
 
-ion-content{
-  background-color: white !important;
+.cocheImagen {
+  max-width: 100%;
 }
-
-// Estilos para pantallas medianas, todos los elementos dentro de un ion-item tendran el color negro y una font-size mediana
-@media (min-width: 600px) and (max-width: 900px) {
-  h1 {
-    font-size: 20px;
+/* Estilos para pantallas pequeñas (menor a 576px) */
+@media only screen and (max-width: 575px) {
+  .cocheImagen {
+    max-width: 80%; /* Reducir el ancho de la imagen */
   }
 
-  h2 {
-    font-size:18px;
-    color: red;
+  .cocheNombre {
+    font-size: 1.2em;
   }
-
-}
-
-// Estilos para pantallas Grandes, todos los elementos dentro de un ion-item tendran el color azul y una font-size grande
-@media (min-width: 901px) {
-  h1 {
-    font-size:24px;
-  }
-
-  h2 {
-    font-size: 20px;
+  h2{
     color: blue;
   }
 }
+
+/* Estilos para pantallas medianas (576px - 991px) */
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+  .cocheImagen {
+    max-width: 70%; /* Reducir el ancho de la imagen */
+  }
+
+  .cocheNombre {
+    font-size: 1.6em;
+  }
+}
+
+/* Estilos para pantallas grandes (mayor o igual a 992px) */
+@media only screen and (min-width: 992px) {
+  .cocheNombre {
+    font-size: 2em;
+  }
+}
+
 
 @media screen and (orientation: portrait) {
   .cocheTransmision,
