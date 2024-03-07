@@ -1,6 +1,7 @@
 // Variables para tamaños de pantalla
+//Breakpoints actualizados para que se optimicen al tamaño de los dispositivos moviles actuales
 $pantalla-pequeña: 320px;
-$pantalla-mediana: 576px;
+$pantalla-mediana: 480px;
 $pantalla-grande: 768px;
 $pantalla-extra-grande: 992px;
 $pantalla-extra-x2-grande: 1200px;
@@ -8,12 +9,10 @@ $pantalla-extra-x3-grande: 1600px;
 
 // Estilos generales
 #container {
-  text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
   strong {
     font-size: 20px;
@@ -36,6 +35,11 @@ ion-card {
   background-color: #cac9c9;
   display: flex;
   flex-direction: column;
+  // Se añade borde a las cards para un estilo mas contemporaneo
+  border-radius: 30px;
+  
+  //Transición para suavizar el cambio de imagen y texto en la tarjeta al cambiar la orientacion y tamaños de pantalla
+  transition: padding 0.3s ease, border-radius 0.3s ease;
 }
 
 h1 {
@@ -48,8 +52,15 @@ h2 {
 }
 
 .cocheImagen {
-  max-width: 100%; // Imágenes responsivas
-}
+  max-width: 100%;
+  //Se utilizan nuevas propiedades de css avanzadas mas actuales para que la imagen se adapte al tamaño del contenedor
+  object-fit: cover;
+  //Normalizado extra de las imagenes para asegurarnos que se escalen correctamente en función del tamaño de la pantalla
+  img {
+    max-width: 100%;
+    height: auto;
+   }
+ }
 
 button {
   font-size: 1em;
@@ -204,11 +215,17 @@ button {
   }
 }
 
-
-
+//Media queries para la orientacion del dispositivo
 @media screen and (orientation: portrait) {
   .cocheTransmision,
   .cocheId {
     display: none;
   }
 }
+//Nuevas media queries para adaptarnos a diferentes características del dispositivo como la existencia de un puntero grueso
+//(es comun en dispositivos moviles)
+@media screen and (pointer: coarse) {
+  ion-card {
+     padding: 15px;
+  }
+ }
