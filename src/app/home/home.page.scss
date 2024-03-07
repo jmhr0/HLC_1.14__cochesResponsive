@@ -30,6 +30,21 @@ $pantalla-extra-x3-grande: 1600px;
     text-decoration: none;
   }
 }
+ion-header {
+  --ion-background-color: #0e1111;
+}
+
+ion-title {
+  color: #fff;
+}
+
+ion-content {
+  --ion-background-color: #0e1111;
+}
+
+ion-input {
+  color: #fff;
+}
 
 ion-card {
   background-color: #cac9c9;
@@ -37,9 +52,11 @@ ion-card {
   flex-direction: column;
   // Se añade borde a las cards para un estilo mas contemporaneo
   border-radius: 30px;
-  
+
   //Transición para suavizar el cambio de imagen y texto en la tarjeta al cambiar la orientacion y tamaños de pantalla
-  transition: padding 0.3s ease, border-radius 0.3s ease;
+  transition:
+    padding 0.3s ease,
+    border-radius 0.3s ease;
 }
 
 h1 {
@@ -59,8 +76,8 @@ h2 {
   img {
     max-width: 100%;
     height: auto;
-   }
- }
+  }
+}
 
 button {
   font-size: 1em;
@@ -78,7 +95,10 @@ button {
     font-size: 0.9em;
   }
 
-  .cocheCreador, .cocheModelo, .cocheColor, .cocheTransmision {
+  .cocheCreador,
+  .cocheModelo,
+  .cocheColor,
+  .cocheTransmision {
     font-size: 0.7em;
   }
 
@@ -98,7 +118,10 @@ button {
     font-size: 1em;
   }
 
-  .cocheCreador, .cocheModelo, .cocheColor, .cocheTransmision {
+  .cocheCreador,
+  .cocheModelo,
+  .cocheColor,
+  .cocheTransmision {
     font-size: 0.8em;
   }
 
@@ -117,7 +140,10 @@ button {
     font-size: 1.1em;
   }
 
-  .cocheCreador, .cocheModelo, .cocheColor, .cocheTransmision {
+  .cocheCreador,
+  .cocheModelo,
+  .cocheColor,
+  .cocheTransmision {
     font-size: 0.9em;
   }
 
@@ -139,7 +165,10 @@ button {
     font-size: 1.2em;
   }
 
-  .cocheCreador, .cocheModelo, .cocheColor, .cocheTransmision {
+  .cocheCreador,
+  .cocheModelo,
+  .cocheColor,
+  .cocheTransmision {
     font-size: 1em;
   }
 
@@ -162,7 +191,10 @@ button {
     font-size: 1.3em;
   }
 
-  .cocheCreador, .cocheModelo, .cocheColor, .cocheTransmision {
+  .cocheCreador,
+  .cocheModelo,
+  .cocheColor,
+  .cocheTransmision {
     font-size: 1.1em;
   }
 
@@ -184,7 +216,10 @@ button {
     font-size: 1.4em;
   }
 
-  .cocheCreador, .cocheModelo, .cocheColor, .cocheTransmision {
+  .cocheCreador,
+  .cocheModelo,
+  .cocheColor,
+  .cocheTransmision {
     font-size: 1.2em;
   }
 
@@ -206,7 +241,10 @@ button {
     font-size: 1.5em;
   }
 
-  .cocheCreador, .cocheModelo, .cocheColor, .cocheTransmision {
+  .cocheCreador,
+  .cocheModelo,
+  .cocheColor,
+  .cocheTransmision {
     font-size: 1.3em;
   }
 
@@ -226,6 +264,6 @@ button {
 //(es comun en dispositivos moviles)
 @media screen and (pointer: coarse) {
   ion-card {
-     padding: 15px;
+    padding: 15px;
   }
- }
+}
